@@ -1,0 +1,26 @@
+{
+  "name": "mindful-agenda",
+  "version": "1.0.0",
+  "description": "MINDFUL-AGENDA is a to-do app that also allows you to focus on meditation by suggesting different types of meditation depending on your meditation style. Once you meditate, your mind will be clear, allowing you to truly focus on the tasks you have for the day.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobhmurphy/mindful-agenda.git"
+  },
+  "author": "Jacob Murphy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobhmurphy/mindful-agenda/issues"
+  },
+  "homepage": "https://github.com/jacobhmurphy/mindful-agenda#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
