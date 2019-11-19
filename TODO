@@ -1,0 +1,19 @@
+### INITIAL SETUP
+
+* Create welcome screen
+* Create screen that quizzes user to determine what meditation would be best for them
+    * Write algorithm to determine for user
+    * Present to user results of algorithm
+* Create username and password screen
+* Should this be the home route if the user isn't logged in? A non-logged in user sees the splash screen; logged-in user sees their tasks
+
+
+### FRONT-END
+
+* Figure out color schema
+    * Light orange as primary color? 
+
+### BACK-END
+
+* Set up SQL tables
+* Install React?
