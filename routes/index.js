@@ -1,8 +1,9 @@
 const express = require('express')
+const app = express()
 const routes = express.Router()
 
-app.get("/", (req, res) => {
-    res.send("Hello world!");
+routes.get("/", (req, res) => {
+    res.render("home.ejs");
   });
 
-  module.exports = routes;
+module.exports = routes;
