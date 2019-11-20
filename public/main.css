@@ -6,3 +6,16 @@
 .meditation {
     background-color: #338B7F;
 }
+
+.form-control:focus {
+    border-color: #9A5476;
+    box-shadow: 0 0 5px #9A5476;
+}
+
+.btn:hover {
+    background-color: #AF732B;
+}
+
+.list-group-item {
+    border-color: #9A5476;
+}
