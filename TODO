@@ -14,8 +14,10 @@
     * Light orange as primary color? - DONE
 * Just using Bootstrap with custom styles? - DONE
 * Fix the navbar for user login and settings
+* Hook tasks into main page
 
 ### BACK-END
 
-* Set up SQL tables
-* Install React?
+* Set up SQL tables - DONE
+* Implement user accounts
+* Implement tasks
