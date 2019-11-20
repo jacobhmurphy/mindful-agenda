@@ -10,9 +10,10 @@
 
 ### FRONT-END
 
-* Figure out color schema
-    * Light orange as primary color? 
-* Just using Bootstrap with custom styles? 
+* Figure out color schema - DONE
+    * Light orange as primary color? - DONE
+* Just using Bootstrap with custom styles? - DONE
+* Fix the navbar for user login and settings
 
 ### BACK-END
 
