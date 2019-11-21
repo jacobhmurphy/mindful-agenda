@@ -17,6 +17,14 @@ routes.post('/new_task', (req, res) => {
   );
 });
 
+routes.delete('/delete/:index', (req, res) => {
+  db.Tasks.destroy({ where: { id: req.params.index } }).then(
+    results => {
+      res.json(results);
+    },
+  );
+});
+
 routes.get('/test', (req, res) => {
   res.render('test.ejs');
 });
