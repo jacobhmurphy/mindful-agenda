@@ -21,20 +21,22 @@
     </a>
   </nav>
   <div class="container">
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Enter your task here" aria-label="Enter your task here"
-        aria-describedby="basic-addon2">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">Add</button>
-      </div>
-    </div>
-    <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
-      <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-      <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-      <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-      <a href="#" class="list-group-item list-group-item-action meditation">Vestibulum at eros</a>
-    </div>
+    <form action="/new_task" method="post">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" name="todoInputField" id="todoInputField"
+          placeholder="Enter your task here" aria-label="Enter your task here" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="submit">Add</button>
+        </div>
+    </form>
+  </div>
+  <div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
+    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+    <a href="#" class="list-group-item list-group-item-action meditation">Vestibulum at eros</a>
+  </div>
   </div>
 
   <!-- Optional JavaScript -->
