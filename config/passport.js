@@ -36,16 +36,19 @@ passport.use(
             message: 'Email already in use',
           });
         } else {
-          User.create({ email: email, password: password }).then(
-            function(newUser) {
-              if (!newUser) {
-                return done(null, false);
-              }
-              if (newUser) {
-                return done(null, newUser);
-              }
-            },
-          );
+          db.Users.create({
+            email: email,
+            password: password,
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+          }).then(function(newUser) {
+            if (!newUser) {
+              return done(null, false);
+            }
+            if (newUser) {
+              return done(null, newUser);
+            }
+          });
         }
       });
     },

@@ -33,9 +33,13 @@ routes.get('/login', (req, res) => {
   res.render('login.ejs');
 });
 
-routes.post('/login', (req, res) => {
-  console.log('Hitting the post route for /login');
-});
+routes.post(
+  '/login',
+  passport.authenticate('local', {
+    failureRedirect: '/login',
+    successRedirect: '/',
+  }),
+);
 
 routes.get('/signup', (req, res) => {
   res.render('signup.ejs');

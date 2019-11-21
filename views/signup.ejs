@@ -21,46 +21,37 @@
         </a>
     </nav>
     <div class="container">
-        <form action="/signup" method="POST">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Homer">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Simpson">
-                </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Sign Up Form</h2>
+                <form action="/signup" method="POST" class="signup">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input name="email" type="email" class="form-control" id="email-input" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input name="firstName" class="form-control" id="firstName-input" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input name="lastName" class="form-control" id="lastName-input" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="password-input"
+                            placeholder="Password">
+                    </div>
+                    <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span> <span class="msg"></span>
+                    </div>
+                    <button type="submit" class="btn btn-default">Sign Up</button>
+                </form>
+                <br />
+                <p>Or log in <a href="/user/login">here</a></p>
             </div>
-            <div class="form-group">
-                <label for="inputAddress">Email</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <!-- Create the unique name/class for each of these inputs -->
-                <label for="formControlRange">Example Range input</label>
-                <input type="range" class="form-control-range" min="1" max="5" value="3" list="tickmarks"
-                    id="formControlRange1">
-                <label for="formControlRange">Example Range input 2</label>
-                <input type="range" class="form-control-range" min="1" max="5" value="3" list="tickmarks"
-                    id="formControlRange2">
-                <label for="formControlRange">Example Range input 3</label>
-                <input type="range" class="form-control-range" min="1" max="5" value="3" list="tickmarks"
-                    id="formControlRange3">
-            </div>
-            <datalist id="tickmarks">
-                <option value="1" label="1"></option>
-                <option value="2" label="2"></option>
-                <option value="3" label="3"></option>
-                <option value="4" label="4"></option>
-                <option value="5" label="5"></option>
-            </datalist>
-            <button type="submit" class="btn btn-secondary">Register</button>
-        </form>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
