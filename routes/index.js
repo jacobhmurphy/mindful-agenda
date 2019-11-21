@@ -4,11 +4,21 @@ const db = require('../models/index');
 const passport = require('../config/passport');
 
 routes.get('/', (req, res) => {
-  res.render('home.ejs');
+  db.Tasks.findAll().then(results => {
+    res.render('home.ejs', { todo: results });
+  });
 });
 
 routes.post('/new_task', (req, res) => {
-  db.Tasks.create({ taskItem: req.body.todoInputField });
+  db.Tasks.create({ taskItem: req.body.todoInputField }).then(
+    results => {
+      res.redirect('/');
+    },
+  );
+});
+
+routes.get('/test', (req, res) => {
+  res.render('test.ejs');
 });
 
 routes.get('/login', (req, res) => {
