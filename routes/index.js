@@ -53,4 +53,18 @@ routes.post(
   }),
 );
 
+// meditation links
+
+routes.get('/audio-meditation', (req, res) => {
+  res.render('audio-meditation.ejs');
+});
+
+routes.get('/video-meditation', (req, res) => {
+  res.render('video-meditation.ejs');
+});
+
+routes.get('/mantra-meditation', (req, res) => {
+  res.render('mantra-meditation.ejs');
+});
+
 module.exports = routes;
