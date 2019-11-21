@@ -1,21 +1,21 @@
 .navbar {
-    background-color: #AF732B;
-    margin-bottom: 20px;
+  background-color: #af732b;
+  margin-bottom: 20px;
 }
 
 .meditation {
-    background-color: #338B7F;
+  background-color: #338b7f;
 }
 
 .form-control:focus {
-    border-color: #9A5476;
-    box-shadow: 0 0 5px #9A5476;
+  border-color: #9a5476;
+  box-shadow: 0 0 5px #9a5476;
 }
 
 .btn:hover {
-    background-color: #AF732B;
+  background-color: #af732b;
 }
 
 .list-group-item {
-    border-color: #9A5476;
+  border-color: #9a5476;
 }
