@@ -1,11 +1,17 @@
 var x = document.querySelector('#formControlRange1').value;
 console.log(x);
 
-var y = document.querySelector('#formControlRange2').value;
-console.log(y);
+// console.log(y);
 
-var z = document.querySelector('#guidedOrNot').value;
-console.log(z);
+function algorithm() {
+  let y = document.querySelector('#formControlRange2').value;
+  let z = document.querySelector('#guidedOrNot').value;
+  if (z == 'Yes') {
+    alert('Hello' + y);
+  } else {
+    alert('Oh no' + y);
+  }
+}
 
 // grab values from input
 
