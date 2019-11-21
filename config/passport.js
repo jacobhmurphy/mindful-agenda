@@ -1,5 +1,5 @@
 const passport = require('passport');
-const db = require('../models/index.js');
+var db = require('../models/index.js');
 const LocalStrategy = require('passport-local').Strategy;
 
 // defining what passport strategy we're using & adding email and password
@@ -23,7 +23,7 @@ passport.use(
   }),
 );
 
-// strategy for creating a user in our db if they don't already exist
+// strategy for creating a user in our db if they don't already exist - THIS SECTION WORKS
 
 passport.use(
   'local-signup',

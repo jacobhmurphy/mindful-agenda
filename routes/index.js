@@ -1,6 +1,6 @@
 const express = require('express');
 const routes = express.Router();
-const passport = require('passport');
+const passport = require('../config/passport');
 
 routes.get('/', (req, res) => {
   res.render('home.ejs');
@@ -25,8 +25,9 @@ routes.get('/signup', (req, res) => {
 routes.post(
   '/signup',
   passport.authenticate('local-signup', {
-    failureRedirect: '/login',
     successRedirect: '/',
+    failureRedirect: '/signup',
+    failureFlash: true,
   }),
 );
 
