@@ -4,6 +4,10 @@ const db = require('../models/index');
 const passport = require('../config/passport');
 
 routes.get('/', (req, res) => {
+  res.render('splash.ejs');
+});
+
+routes.get('/tasks', (req, res) => {
   db.Tasks.findAll({ where: { userID: req.user.id } }).then(
     results => {
       res.render('home.ejs', { todo: results, user: req.user });
@@ -36,7 +40,7 @@ routes.post(
   '/login',
   passport.authenticate('local', {
     failureRedirect: '/login',
-    successRedirect: '/',
+    successRedirect: '/tasks',
   }),
 );
 
@@ -47,10 +51,15 @@ routes.get('/signup', (req, res) => {
 routes.post(
   '/signup',
   passport.authenticate('local-signup', {
-    successRedirect: '/',
+    successRedirect: '/tasks',
     failureRedirect: '/signup',
   }),
 );
+
+routes.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/login');
+});
 
 // meditation links
 
