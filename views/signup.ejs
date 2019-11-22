@@ -22,7 +22,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col">
                 <h2>Sign Up Form</h2>
                 <form action="/signup" method="POST" class="signup">
                     <div class="form-group">
@@ -45,6 +45,8 @@
                     <p>Would you like someone to guide you through your meditation?</p>
                     <input type="radio" name="mantra" id="mantra" value="1"> Yes
                     <input type="radio" name="mantra" id="mantra" value="0"> No
+                    <br>
+                    <br>
                     <p>Would you prefer audio or video for your meditation?</p>
                     <input type="radio" name="audioOrVideo" id="audioOrVideo" value="2"> Video
                     <input type="radio" name="audioOrVideo" id="audioOrVideo" value="3"> Audio
@@ -53,7 +55,8 @@
                         <span class="sr-only">Error:</span> <span class="msg"></span>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-default">Sign Up</button>
+                    <br>
+                    <button type="submit" class="btn btn-outline-secondary">Sign Up</button>
                 </form>
                 <br />
                 <p>Or log in <a href="/login">here</a></p>
