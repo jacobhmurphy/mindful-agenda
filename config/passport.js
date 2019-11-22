@@ -9,12 +9,8 @@ passport.use(
     done,
   ) {
     db.Users.findOne({ where: { email: email } }).then(function(
-      err,
       dbUser,
     ) {
-      if (err) {
-        return done(err);
-      }
       if (!dbUser) {
         return done(null, false, { message: 'Incorrect username' });
       }
