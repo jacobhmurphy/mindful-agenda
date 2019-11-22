@@ -8,14 +8,17 @@ passport.use(
     password,
     done,
   ) {
-    db.Users.findOne({ email: email }).then(function(err, dbUser) {
+    db.Users.findOne({ where: { email: email } }).then(function(
+      err,
+      dbUser,
+    ) {
       if (err) {
         return done(err);
       }
       if (!dbUser) {
         return done(null, false, { message: 'Incorrect username' });
       }
-      if (!dbUser.validPassword(password)) {
+      if (!dbUser.verifyPassword(password)) {
         return done(null, false, { message: 'Incorrect password' });
       }
       return done(null, dbUser);
@@ -41,6 +44,8 @@ passport.use(
             password: password,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
+            mantra: req.body.mantra,
+            audioOrVideo: req.body.audioOrVideo,
           }).then(function(newUser) {
             if (!newUser) {
               return done(null, false);

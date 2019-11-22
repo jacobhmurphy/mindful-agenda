@@ -42,6 +42,12 @@
                         <input type="password" name="password" class="form-control" id="password-input"
                             placeholder="Password">
                     </div>
+                    <p>Would you like someone to guide you through your meditation?</p>
+                    <input type="radio" name="mantra" id="mantra" value="1"> Yes
+                    <input type="radio" name="mantra" id="mantra" value="0"> No
+                    <p>Would you prefer audio or video for your meditation?</p>
+                    <input type="radio" name="audioOrVideo" id="audioOrVideo" value="2"> Video
+                    <input type="radio" name="audioOrVideo" id="audioOrVideo" value="3"> Audio
                     <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                         <span class="sr-only">Error:</span> <span class="msg"></span>
@@ -49,7 +55,7 @@
                     <button type="submit" class="btn btn-default">Sign Up</button>
                 </form>
                 <br />
-                <p>Or log in <a href="/user/login">here</a></p>
+                <p>Or log in <a href="/login">here</a></p>
             </div>
         </div>
     </div>
@@ -65,7 +71,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="alg.js"></script>
+    <!-- <script src="alg.js"></script> -->
 </body>
 
 </html>
