@@ -4,17 +4,20 @@ const db = require('../models/index');
 const passport = require('../config/passport');
 
 routes.get('/', (req, res) => {
-  db.Tasks.findAll().then(results => {
-    res.render('home.ejs', { todo: results });
-  });
+  db.Tasks.findAll({ where: { userID: req.user.id } }).then(
+    results => {
+      res.render('home.ejs', { todo: results, user: req.user });
+    },
+  );
 });
 
 routes.post('/new_task', (req, res) => {
-  db.Tasks.create({ taskItem: req.body.todoInputField }).then(
-    results => {
-      res.redirect('/');
-    },
-  );
+  db.Tasks.create({
+    taskItem: req.body.todoInputField,
+    userID: req.user.id,
+  }).then(results => {
+    res.redirect('/');
+  });
 });
 
 routes.delete('/delete/:index', (req, res) => {
@@ -23,10 +26,6 @@ routes.delete('/delete/:index', (req, res) => {
       res.json(results);
     },
   );
-});
-
-routes.get('/test', (req, res) => {
-  res.render('test.ejs');
 });
 
 routes.get('/login', (req, res) => {

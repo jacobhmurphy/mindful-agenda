@@ -1,4 +1,4 @@
-var listItems = document.querySelector('ul');
+var listItems = document.querySelector('.todoItems');
 
 listItems.addEventListener('click', function(event) {
   console.log(event.target.id);
