@@ -20,7 +20,7 @@ routes.post('/new_task', (req, res) => {
     taskItem: req.body.todoInputField,
     userID: req.user.id,
   }).then(results => {
-    res.redirect('/');
+    res.redirect('/tasks');
   });
 });
 
